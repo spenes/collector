@@ -47,7 +47,7 @@ trait IService[F[_]] {
 
 object Service {
   // Contains an invisible pixel to return for `/i` requests.
-  val pixel = Base64.decodeBase64("R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==")
+  val pixel = Base64.decodeBase64("R0lGODlhAQABAPAAAP///wAAACH5BAUAAAAALAAAAAABAAEAAAICRAEAOw==")
 
   val spAnonymousNuid = "00000000-0000-0000-0000-000000000000"
 }

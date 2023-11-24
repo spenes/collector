@@ -49,7 +49,7 @@ class RobotsSpec extends Specification with Localstack with CatsEffect {
           collectorOutput <- Kinesis.readOutput(streamGood, streamBad)
         } yield {
           response.status.code must beEqualTo(200)
-          body must beEqualTo("User-agent: *\nDisallow: /")
+          body must beEqualTo("User-agent: *\nDisallow: /\n\nUser-agent: Googlebot\nDisallow: /\n\nUser-agent: AdsBot-Google\nDisallow: /")
           collectorOutput.good must beEmpty
           collectorOutput.bad must beEmpty
         }
