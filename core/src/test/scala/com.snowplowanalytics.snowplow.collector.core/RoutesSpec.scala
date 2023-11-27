@@ -72,7 +72,7 @@ class RoutesSpec extends Specification {
       val response    = routes.run(request).unsafeRunSync()
 
       response.status must beEqualTo(Status.Ok)
-      response.as[String].unsafeRunSync() must beEqualTo("OK")
+      response.as[String].unsafeRunSync() must beEqualTo("ok")
     }
 
     "respond to the cors route with a preflight response" in {
